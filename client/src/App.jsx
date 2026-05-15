@@ -36,7 +36,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await fetch("https://word-to-pdf-njda.onrender.com/convert", {
+      const response = await fetch("https://word-to-pdf-ueii.onrender.com/convert", {
         method: "POST",
         body: formData,
       });
