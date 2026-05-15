@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+
+# environment variables
+.env
+
+# temp files
+temp
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# build files
+dist
+build
+
+# vscode
+.vscode
+
+# uploads
+uploads
+
+# generated files
+output
