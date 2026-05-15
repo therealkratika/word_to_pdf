@@ -15,7 +15,12 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://word-to-pdf-mauve.vercel.app/",
+  })
+);
 app.use(express.json());
 
 const tempDir = path.resolve(__dirname, "temp");
@@ -38,9 +43,6 @@ const libreOfficePath = process.env.LIBREOFFICE_PATH || (process.platform === "w
       try {
         const originalNameOnly = path.parse(file.originalname).name;
         const uniqueId = file.filename; // Multer's random string
-        
-        // 1. Define paths
-        // We ensure the PDF name matches the unique Multer filename
         const inputPath = path.resolve(file.path);
         const outputDir = path.resolve(__dirname, "temp");
         const pdfPath = path.join(outputDir, `${uniqueId}.pdf`);

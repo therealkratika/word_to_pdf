@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: word-to-pdf-api
+
+    env: node
+
+    buildCommand: |
+      apt-get update
+      apt-get install -y libreoffice
+      npm install
+
+    startCommand: npm start
