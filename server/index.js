@@ -18,7 +18,7 @@ cloudinary.config({
 app.use(
   cors({
     origin:
-      "https://word-to-pdf-mauve.vercel.app/",
+      "https://word-to-pdf-mauve.vercel.app",
   })
 );
 app.use(express.json());
